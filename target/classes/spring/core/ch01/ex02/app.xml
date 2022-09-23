@@ -4,16 +4,18 @@
     xsi:schemaLocation='http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans.xsd'>
 	
-	<!-- IoC - 무슨 ID를 만들지 지정해주는 현재 과정들 -->
+	<!-- IoC - 컨테이너가 무슨 ID를 만들지 지정해주는 현재 과정들 -->
 	<bean id='pistol' class='spring.core.ch01.ex01.Pistol'/>
 	<bean id='rifle' class='spring.core.ch01.ex01.Rifle'/>
 	
 	<bean id='shooter1' class='spring.core.ch01.ex02.Shooter'>
-		<constructor-arg value='최한석'/>
+		<!-- 1.constructor-arg -생성자를 통해 받는 방법 -->
+		<constructor-arg value='최한석'/> <!-- 일반적인 값을 넣을때는, value로 지정 -->
 		<constructor-arg ref='pistol'/>	<!-- 객체를 받을때엔 위에서 지정한 id를 ref로 활용 -->
 	</bean>
 	
 	<bean id='shooter2' class='spring.core.ch01.ex02.Shooter'>
+		<!-- 2.property - setter를 통해 받는 방법 -->
 		<property name='name' value='한아름'/> 
 		<property name='gun' ref='rifle'/>
 	</bean>

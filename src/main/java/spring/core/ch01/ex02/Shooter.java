@@ -9,7 +9,7 @@ import spring.core.ch01.ex01.Gun;
 @NoArgsConstructor
 @AllArgsConstructor
 
-// @setter - setter를 만드는 lombok annotation
+// @Setter - setter를 만드는 lombok annotation
 // @NoArgsConstructor - arguments가 없는 생성자 lombok annotation 
 // @AllArgsConstructor - arguments를 가지는 생성자 lombok annotation
 public class Shooter {
