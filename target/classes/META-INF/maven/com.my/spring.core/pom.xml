@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.my</groupId>
+	<artifactId>spring.core</artifactId>
+  	<version>1.0</version>
+  
+  	<properties>
+  		<spring.ver>5.3.22</spring.ver>
+  	</properties>
+  
+ 	<dependencies>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-context</artifactId>
+   			<version>${spring.ver}</version> <!-- 내가 정의한 property는 EL로 사용한다. -->
+  		</dependency>
+  		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.24</version>
+		    <scope>provided</scope> <!-- 파일에 포함하는 스코프를 지정(provided - 개발시에만 사용 앱의 파일엔 추가하지않음) -->
+		</dependency>
+  	</dependencies>
+</project>

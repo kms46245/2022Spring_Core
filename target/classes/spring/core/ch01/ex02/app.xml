@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<beans xmlns='http://www.springframework.org/schema/beans'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd'>
+	
+	<!-- IoC - 무슨 ID를 만들지 지정해주는 현재 과정들 -->
+	<bean id='pistol' class='spring.core.ch01.ex01.Pistol'/>
+	<bean id='rifle' class='spring.core.ch01.ex01.Rifle'/>
+	
+	<bean id='shooter1' class='spring.core.ch01.ex02.Shooter'>
+		<constructor-arg value='최한석'/>
+		<constructor-arg ref='pistol'/>	<!-- 객체를 받을때엔 위에서 지정한 id를 ref로 활용 -->
+	</bean>
+	
+	<bean id='shooter2' class='spring.core.ch01.ex02.Shooter'>
+		<property name='name' value='한아름'/> 
+		<property name='gun' ref='rifle'/>
+	</bean>
+</beans>
