@@ -1,7 +1,5 @@
 package spring.core.ch01.ex04;
 
-import java.io.ObjectInputFilter.Config;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

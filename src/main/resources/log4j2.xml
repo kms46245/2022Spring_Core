@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Configuration>
+	<Appenders>
+		<Console name='console' target='SYSTEM_OUT'>	<!-- 이클립스상의 콘솔출력단 -->
+			<PatternLayout/>
+		</Console>
+		<RollingFile name='file' fileName='c:/DEV/spring.core.log'
+			filePattern='c:/DEV/spring.core.%d{yyyy-MM-dd-HH-mm-ss}.log'> <!-- disk상에 저장 -->
+			<PatternLayout pattern='[%-5p: %d{yyyy/MM/dd HH:mm:ss}] %m%n'/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval='86400'/>
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	
+	<Loggers>
+		<Root level='info'>
+			<AppenderRef ref='console'/>
+			<AppenderRef ref='file'/>
+		</Root>
+	</Loggers>
+</Configuration>

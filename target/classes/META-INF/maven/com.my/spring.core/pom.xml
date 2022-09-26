@@ -23,5 +23,15 @@
 		    <version>1.18.24</version>
 		    <scope>provided</scope> <!-- 파일에 포함하는 스코프를 지정(provided - 개발시에만 사용 앱의 파일엔 추가하지않음) -->
 		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.18.0</version>
+		</dependency>
   	</dependencies>
 </project>
